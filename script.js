@@ -100,7 +100,7 @@
               const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
-    fetch("http://localhost:5678/webhook-test/order", {
+    fetch("https://morilos.app.n8n.cloud/webhook/order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -345,5 +345,6 @@
 
 
     
+
 
 
