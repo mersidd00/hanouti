@@ -87,13 +87,16 @@
           form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        // إرسال الحدث إلى Facebook
+       
+        if (validateForm()) {
+          // Form is valid, you can submit or do further processing here
+          // إرسال الحدث إلى Facebook
         fbq('track', 'Purchase', {
          value: 1000.00,     // ← غيّرها لسعر المنتج
          currency: 'DZD'    // ← غيّرها لعملتك مثل 'DZD' أو 'EUR'
         });
-        if (validateForm()) {
-          // Form is valid, you can submit or do further processing here
+
+            
               const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
 
@@ -342,4 +345,5 @@
 
 
     
+
 
