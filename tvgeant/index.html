@@ -1,0 +1,389 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Order Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+<link rel="stylesheet" href="style.css">
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src='https://connect.facebook.net/en_US/fbevents.js';
+  s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script');
+
+  fbq('init', '515968741174274'); // ← ضع هنا معرف Pixel
+  fbq('track', 'PageView');
+</script>
+
+<noscript>
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=515968741174274&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+</head>
+<body class="bg-white flex flex-col items-center justify-start min-h-screen p-4 space-y-6" >
+
+    <!-- رأس الصفحة -->
+    <header class="header">
+        <div class="logo-icons">
+            <img src="images/menu.png" alt="قائمة" class="icon">
+            <img src="images/logo.png" alt="لوجو المتجر" class="logo">
+            <div class="icons">
+                <img src="images/search.png" alt="بحث" class="icon">
+                <img src="images/cart.png" alt="سلة" class="icon">
+            </div>
+        </div>
+    </header>
+    <hr>
+
+
+
+
+<div class="container" aria-label="Product image slider and information">
+    <section class="slider" aria-label="Product image slider">
+      <div class="slides">
+        <div class="slide active" data-index="0" aria-hidden="false">
+          <img
+            src="images/img1.webp"
+            alt="Gray sneaker shoe side view on bright pink background"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+        <div class="slide" data-index="1" aria-hidden="true">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/ab1b196a-5c1c-4e58-1961-9fb53facd28b.jpg"
+            alt="Black sneaker shoe back view on bright pink background"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+        <div class="slide" data-index="2" aria-hidden="true">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/0f4bd539-d026-4493-0012-f88713e2bf0f.jpg"
+            alt="Black sneaker shoe side view on bright pink background"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+        <div class="slide" data-index="3" aria-hidden="true">
+          <img
+            src="https://storage.googleapis.com/a1aa/image/45e823e3-dfad-4bac-0071-e81d4209adc8.jpg"
+            alt="Gray sneaker shoe with hand holding on bright pink background"
+            draggable="false"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+    </section>
+
+    <nav class="thumbnails" aria-label="Product image thumbnails" role="list">
+      <button
+        class="thumbnail active"
+        data-index="0"
+        role="listitem"
+        aria-current="true"
+        aria-label="View product image 1"
+        tabindex="0"
+        type="button"
+      >
+        <img
+          src="images/img1.webp"
+          alt="Thumbnail of gray sneaker shoe side view on bright pink background"
+          draggable="false"
+          loading="lazy"
+        />
+      </button>
+      <button
+        class="thumbnail"
+        data-index="1"
+        role="listitem"
+        aria-label="View product image 2"
+        tabindex="-1"
+        type="button"
+      >
+        <img
+          src="https://storage.googleapis.com/a1aa/image/ab1b196a-5c1c-4e58-1961-9fb53facd28b.jpg"
+          alt="Thumbnail of black sneaker shoe back view on bright pink background"
+          draggable="false"
+          loading="lazy"
+        />
+      </button>
+      <button
+        class="thumbnail"
+        data-index="2"
+        role="listitem"
+        aria-label="View product image 3"
+        tabindex="-1"
+        type="button"
+      >
+        <img
+          src="https://storage.googleapis.com/a1aa/image/0f4bd539-d026-4493-0012-f88713e2bf0f.jpg"
+          alt="Thumbnail of black sneaker shoe side view on bright pink background"
+          draggable="false"
+          loading="lazy"
+        />
+      </button>
+      <button
+        class="thumbnail"
+        data-index="3"
+        role="listitem"
+        aria-label="View product image 4"
+        tabindex="-1"
+        type="button"
+      >
+        <img
+          src="https://storage.googleapis.com/a1aa/image/45e823e3-dfad-4bac-0071-e81d4209adc8.jpg"
+          alt="Thumbnail of gray sneaker shoe with hand holding on bright pink background"
+          draggable="false"
+          loading="lazy"
+        />
+      </button>
+    </nav>
+
+    <section class="product-info">
+      <h1 class="product-title">Television Geant 32/43 pouces</h1>
+      <p class="product-price"></p>
+    </section>
+  </div>
+
+<div class="border border-black rounded-md p-6 w-full max-w-sm flex flex-col items-center gap-6">
+    <h1 class="text-center text-black text-xl font-sans">اختر الحجم الذي يناسبك</h1>
+    
+    <div class="flex gap-6 w-full justify-center">
+      <button
+        data-price="19000 "
+        data-size="32 pouce"
+        class="variant-btn border border-black rounded-md px-10 py-2 text-center text-black text-sm font-sans transition-colors duration-300 hover:border-orange-500"
+      >
+        32 pouce
+      </button>
+      <button
+        data-price="29000 "
+        data-size="43 pouce"
+        class="variant-btn border border-black rounded-md px-10 py-2 text-center text-black text-sm font-sans transition-colors duration-300 hover:border-orange-500"
+      >
+        43 pouce
+      </button>
+    </div>
+    
+    <div>
+      <span id="price" class="text-orange-500 font-extrabold text-4xl font-sans">da 19,000 </span>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  <form
+    id="orderForm"
+    class="max-w-xs w-full bg-white border border-gray-200 rounded-lg shadow-sm p-6 "
+    aria-label="Your order form"
+    novalidate
+  >
+  <input type="hidden" name="selected_size" id="selectedSizeInput" value="">
+  <input type="hidden" name="selected_price" id="selectedPriceInput" value="">
+
+
+    <h2 class="text-center font-semibold text-gray-900 mb-6 text-lg">استمارة الطلب</h2>
+
+    <input type="hidden" name="product_title" id="productTitle" value="television geant ">
+
+
+    <label for="fullname" class="text-right block font-semibold text-gray-800 mb-1 ">الاسم و اللقب</label>
+    <input
+      id="fullname"
+      name="fullname"
+      type="text"
+      placeholder="الاسم و اللقب"
+      class="text-right w-full border border-gray-300 rounded-md px-3 py-2 mb-1 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+      autocomplete="name"
+      
+      aria-describedby="fullnameError"
+      aria-invalid="false"
+    />
+    <p id="fullnameError" class="text-right text-red-600 text-sm mb-4 hidden">يرجى إدخال الاسم</p>
+
+    <label for="phone" class="text-right block font-semibold text-gray-800 mb-1">رقم الهاتف</label>
+    <input
+      id="phone"
+      name="phone"
+      type="tel"
+      placeholder="رقم الهاتف"
+      class="text-right w-full border border-gray-300 rounded-md px-3 py-2 mb-1 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+      autocomplete="tel"
+      pattern="\d{10}"
+      maxlength="10"
+      inputmode="numeric"
+      title="Phone number must be exactly 10 digits"
+      oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,10)"
+      aria-describedby="phoneError"
+      aria-invalid="false"
+    />
+    <p id="phoneError" class="text-right text-red-600 text-sm mb-4 hidden">يرجى إدخال رقم الهاتف</p>
+
+    <label for="wilaya" class="text-right block font-semibold text-gray-800 mb-1">الولاية</label>
+    <select
+    
+      id="wilaya"
+      name="wilaya"
+      class=" w-full border border-gray-300 rounded-md px-3 py-2 mb-1 appearance-none bg-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+      aria-label="Wilaya"
+      dir="rtl"
+      aria-describedby="wilayaError"
+      aria-invalid="false"
+    >
+      <option value="">- الولاية -</option>
+<option value="01 - Adrar">01 - أدرار</option>
+<option value="02 - Chlef">02 - الشلف</option>
+<option value="03 - Laghouat">03 - الأغواط</option>
+<option value="04 - Oum El Bouaghi">04 - أم البواقي</option>
+<option value="05 - Batna">05 - باتنة</option>
+<option value="06 - Béjaïa">06 - بجاية</option>
+<option value="07 - Biskra">07 - بسكرة</option>
+<option value="08 - Béchar">08 - بشار</option>
+<option value="09 - Blida">09 - البليدة</option>
+<option value="10 - Bouira">10 - البويرة</option>
+<option value="11 - Tamanrasset">11 - تمنراست</option>
+<option value="12 - Tébessa">12 - تبسة</option>
+<option value="13 - Tlemcen">13 - تلمسان</option>
+<option value="14 - Tiaret">14 - تيارت</option>
+<option value="15 - Tizi Ouzou">115 - تيزي وزو</option>
+<option value="16 - Alger">16 - الجزائر</option>
+<option value="17 - Djelfa">17 - الجلفة</option>
+<option value="18 - Jijel">18 - جيجل</option>
+<option value="19 - Sétif">19 - سطيف</option>
+<option value="20 - Saïda">20 - سعيدة</option>
+<option value="21 - Skikda">21 - سكيكدة</option>
+<option value="22 - Sidi Bel Abbès">22 - سيدي بلعباس</option>
+<option value="23 - Annaba">23 - عنابة</option>
+<option value="24 - Guelma">24 - قالمة</option>
+<option value="25 - Constantine">25 - قسنطينة</option>
+<option value="26 - Médéa">26 - المدية</option>
+<option value="27 - Mostaganem">27- مستغانم</option>
+<option value="28 - M'Sila">28 - المسيلة</option>
+<option value="29 - Mascara">29 - معسكر</option>
+<option value="30 - Ouargla">30 - ورقلة</option>
+<option value="31 - Oran">31 - وهران</option>
+<option value="32 - El Bayadh">32 - البيض</option>
+<option value="33 - Illizi">33 - إليزي</option>
+<option value="34 - Bordj Bou Arréridj">34 - برج بوعريريج</option>
+<option value="35 - Boumerdès">35 - بومرداس</option>
+<option value="36 - El Tarf">36 - الطارف</option>
+<option value="37 - Tindouf">37 - تندوف</option>
+<option value="38 - Tissemsilt">38 - تيسمسيلت</option>
+<option value="39 - El Oued">39 - الوادي</option>
+<option value="40 - Khenchela">40 - خنشلة</option>
+<option value="41 - Souk Ahras">41 - سوق أهراس</option>
+<option value="42 - Tipaza">42 - تيبازة</option>
+<option value="43 - Mila">43 - ميلة</option>
+<option value="44 - Aïn Defla">44 - عين الدفلى</option>
+<option value="45 - Naâma">45 - النعامة</option>
+<option value="46 - Aïn Témouchent">46 - عين تموشنت</option>
+<option value="47 - Ghardaïa">47 - غرداية</option>
+<option value="48 - Relizane">48 - غليزان</option>
+<option value="49 - El M'Ghair">49 - تيميمون</option>
+<option value="50 - El Menia">50 - برج باجي مختار</option>
+<option value="51 - Ouled Djellal">51 - أولاد جلال</option>
+<option value="52 - Bordj Badji Mokhtar">52 -  بني عباس </option>
+<option value="53 - Béni Abbès">53 - عين صالح </option>
+<option value="54 - Timimoun">54 - عين قزام</option>
+<option value="55 - Touggourt">55 - تقرت</option>
+<option value="56 - Djanet">56 - جانت</option>
+<option value="57 - In Salah">57 - المغير </option>
+<option value="58 - In Guezzam">58 - المنيعة </option>
+
+
+
+    </select>
+    <p id="wilayaError" class="text-right text-red-600 text-sm mb-4 hidden">يرجى اختيار الولاية</p>
+
+    <fieldset class="mb-4" aria-describedby="deliveryCostError" role="radiogroup" dir="rtl">
+      <legend class="text-right font-semibold text-gray-800 mb-2">تكاليف التوصبل</legend>
+      <div class="flex items-center justify-between mb-2">
+        <label class="inline-flex items-center text-gray-700 text-sm cursor-pointer">
+          <input
+            id="deliveryOffice"
+            type="radio"
+            name="delivery_cost"
+            class="form-radio text-orange-500 rounded border-gray-300 focus:ring-orange-500"
+            value="office"
+          />
+          <span class="mr-2">التوصيل الى المكتب</span>
+        </label>
+        <span class="text-gray-700 text-sm" id="officeDeliveryPrice">500.00 دج</span>
+      </div>
+      <div class="flex items-center justify-between">
+        <label class="inline-flex items-center text-gray-700 text-sm cursor-pointer">
+          <input
+            id="deliveryHome"
+            type="radio"
+            name="delivery_cost"
+            class="form-radio text-orange-500 rounded border-gray-300 focus:ring-orange-500"
+            value="home"
+          />
+          <span class="mr-2">التوصيل الى المنزل</span>
+        </label>
+        <span class="text-gray-700 text-sm" id="homeDeliveryPrice">-</span>
+      </div>
+      <p id="deliveryCostError" class="text-red-600 text-sm mt-1 hidden">يرجى اختيار طريقة التوصيل</p>
+    </fieldset>
+    <input type="hidden" name="delivery_price" id="deliveryPriceInput" value="">
+
+    <div  class="flex justify-between items-center font-bold text-gray-900 mb-4 border-t border-gray-300 pt-3" dir="rtl">
+      <span>المجموع الكلي</span>
+      <span id="subTotal">00.00 دج</span>
+    </div>
+
+    <fieldset class="mb-6 border-t border-b border-gray-300 py-3 ">
+      <label class="inline-flex items-center cursor-pointer text-gray-700 space-x-3 " >
+        <button type="button" id="minusBtn" class="bg-gray-200 hover:bg-gray-300 rounded px-3 py-1 select-none" aria-label="Decrease quantity">−</button>
+        <input type="text" id="quantityInput" name="quantity" value="1" readonly class="w-12 text-center border border-gray-300 rounded-md py-1 text-gray-900 font-semibold" aria-label="Quantity" />
+        <button type="button" id="plusBtn" class="bg-gray-200 hover:bg-gray-300 rounded px-3 py-1 select-none" aria-label="Increase quantity">+</button>
+      </label>
+    </fieldset>
+
+    <div class="flex justify-between items-center font-extrabold text-gray-900 mb-6 text-lg">
+      <span>TOTAL</span>
+      <span id="totalAmount"  >00.00 <span class="text-base font-normal ">دج</span></span>
+    </div>
+    <input type="hidden" name="total_price" id="totalPriceInput" value="">
+
+
+    <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-md py-3 tracking-wide">
+      تأكيد الطلب
+    </button>
+  </form>
+
+      <!-- التذييل -->
+       <hr>
+    <footer class="footer">
+
+        <img src="images/logo.png" alt="لوجو" class="footer-logo">
+        <p>جميع الحقوق محفوظة لموقع hanouti</p>
+        <p>2025</p>
+        <div class="phone">
+            <p>0551201454</p>
+        </div>
+    </footer>
+    
+
+  <script src="script.js" defer></script>
+</body>
+</html>
