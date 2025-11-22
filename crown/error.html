@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حدث خطأ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-red-50 flex items-center justify-center min-h-screen px-4">
+    <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg text-center max-w-md w-full space-y-4">
+      
+      <!-- شعار المتجر -->
+      <img src="images/logo.png" alt="" class="mx-auto w-24 h-auto" />
+
+      <!-- أيقونة الخطأ -->
+      <svg class="mx-auto w-16 h-16 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+
+      <!-- العنوان -->
+      <h1 class="text-xl sm:text-2xl font-bold text-red-600">فشل إرسال الطلب</h1>
+
+      <!-- الوصف -->
+      <p class="text-gray-600">حدث خطأ أثناء محاولة إرسال طلبك. يرجى إعادةالمحاولة .</p>
+
+      <!-- زر الرجوع -->
+      <a href="index.html" class="inline-block bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition">أعد المحاولة</a>
+    </div>
+  </body>
+</html>
