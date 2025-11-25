@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --accent: #ec4899;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--light);
+            line-height: 1.9;
+            color: var(--dark);
+        }
+
+        /* Header */
+        header {
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "🔒";
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(-50%, -45%) rotate(5deg); }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .last-updated {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            opacity: 0.85;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Content Container */
+        .content {
+            max-width: 900px;
+            margin: -2rem auto 4rem;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        }
+
+        .intro {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 3rem;
+            border-right: 4px solid var(--primary);
+        }
+
+        .intro p {
+            color: #475569;
+            font-size: 1.05rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--light);
+        }
+
+        .section-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .section-content {
+            color: #475569;
+            font-size: 1.05rem;
+        }
+
+        .section-content p {
+            margin-bottom: 1.2rem;
+        }
+
+        .section-content ul {
+            margin: 1rem 0 1.5rem 2rem;
+            list-style: none;
+        }
+
+        .section-content ul li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-right: 1.5rem;
+        }
+
+        .section-content ul li::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            right: 0;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            border-right: 4px solid var(--primary);
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: right;
+        }
+
+        tbody tr {
+            background: white;
+            border-bottom: 1px solid var(--light);
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--light);
+        }
+
+        tbody tr:hover {
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        /* Contact Box */
+        .contact-box {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 3rem;
+            box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
+        }
+
+        .contact-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-box p {
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+
+        .contact-btn {
+            padding: 1rem 2.5rem;
+            background: white;
+            color: var(--primary);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Footer */
+     footer {
+            background: linear-gradient(135deg, #1e2a38 0%, #2c3e50 100%);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to left, var(--primary), var(--secondary));
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+            transform: translateX(-5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-5px) rotate(360deg);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-card {
+                padding: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo"><img src="logo.png" alt="" width="100px"> </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+                <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>سياسة الخصوصية</h1>
+        <p>نحن ملتزمون بحماية خصوصيتك وبياناتك الشخصية</p>
+        <div class="last-updated">📅 آخر تحديث: 24 نوفمبر 2025</div>
+    </section>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="content-card">
+            <div class="intro">
+                <p>
+                    في <strong>حانوتي</strong>، نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح سياسة الخصوصية هذه كيفية جمع واستخدام وحماية المعلومات التي تقدمها لنا عند استخدام موقعنا الإلكتروني وخدماتنا.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">📝</span>
+                    المعلومات التي نجمعها
+                </h2>
+                <div class="section-content">
+                    <p>نقوم بجمع أنواع مختلفة من المعلومات لتوفير وتحسين خدماتنا:</p>
+                    
+                    <h3 style="color: var(--primary); margin-top: 1.5rem; margin-bottom: 1rem;"> المعلومات الشخصية</h3>
+                    <ul>
+                        <li>الاسم الكامل</li>
+                        
+                        <li>رقم الهاتف</li>
+                        <li>عنوان التوصيل</li>
+                       
+                    </ul>
+
+                    
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">🎯</span>
+                    كيف نستخدم معلوماتك
+                </h2>
+                <div class="section-content">
+                    <p>نستخدم المعلومات التي نجمعها للأغراض التالية:</p>
+                    <ul>
+                        <li>معالجة وتنفيذ طلباتك</li>
+                        <li>تحسين تجربة المستخدم على موقعنا</li>
+                        <li>إرسال إشعارات حول حالة الطلب</li>
+                        <li>التواصل معك بشأن العروض والمنتجات الجديدة</li>
+                        <li>تحليل سلوك المستخدمين لتحسين خدماتنا</li>
+                        <li>منع الاحتيال وضمان الأمان</li>
+                        <li>الامتثال للمتطلبات القانونية</li>
+                    </ul>
+
+                    <div class="highlight-box">
+                        <p>💡 ملاحظة: لن نقوم أبداً ببيع أو تأجير معلوماتك الشخصية لأطراف ثالثة لأغراض تسويقية.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">🔒</span>
+                    حماية البيانات
+                </h2>
+                <div class="section-content">
+                    <p>نتخذ إجراءات أمنية صارمة لحماية معلوماتك:</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>الإجراء الأمني</th>
+                                <th>الوصف</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>تشفير SSL</strong></td>
+                                <td>جميع البيانات المنقولة مشفرة بتقنية SSL 256-bit</td>
+                            </tr>
+                            <tr>
+                                <td><strong>خوادم آمنة</strong></td>
+                                <td>تخزين البيانات على خوادم محمية بجدران نارية</td>
+                            </tr>
+                            <tr>
+                                <td><strong>وصول محدود</strong></td>
+                                <td>فقط الموظفون المصرح لهم يمكنهم الوصول للبيانات</td>
+                            </tr>
+                            <tr>
+                                <td><strong>نسخ احتياطي</strong></td>
+                                <td>نسخ احتياطية منتظمة لحماية البيانات</td>
+                            </tr>
+                            <tr>
+                                <td><strong>مراقبة مستمرة</strong></td>
+                                <td>مراقبة 24/7 للكشف عن أي نشاط غير طبيعي</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">🍪</span>
+                    ملفات تعريف الارتباط (Cookies)
+                </h2>
+                <div class="section-content">
+                    <p>نستخدم ملفات تعريف الارتباط لتحسين تجربتك على موقعنا:</p>
+                    
+                    <h3 style="color: var(--primary); margin-top: 1.5rem; margin-bottom: 1rem;">أنواع ملفات Cookies المستخدمة:</h3>
+                    <ul>
+                        <li><strong>ملفات ضرورية:</strong> لازمة لتشغيل الموقع بشكل صحيح</li>
+                        <li><strong>ملفات وظيفية:</strong> لتذكر تفضيلاتك واختياراتك</li>
+                        <li><strong>ملفات تحليلية:</strong> لفهم كيفية استخدامك للموقع</li>
+                        <li><strong>ملفات تسويقية:</strong> لعرض إعلانات ذات صلة باهتماماتك</li>
+                    </ul>
+
+                    <p>يمكنك التحكم في ملفات Cookies من خلال إعدادات متصفحك.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">👥</span>
+                    مشاركة المعلومات
+                </h2>
+                <div class="section-content">
+                    <p>قد نشارك معلوماتك مع أطراف ثالثة موثوقة في الحالات التالية:</p>
+                    <ul>
+                        <li>شركات الشحن والتوصيل لإتمام طلباتك</li>
+                        
+                        <li>مزودي الخدمات التقنية لصيانة الموقع</li>
+                        
+                    </ul>
+
+                    <div class="highlight-box">
+                        <p>🔐 جميع الأطراف الثالثة ملزمة بحماية معلوماتك والامتثال لمعايير الخصوصية.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">⚖️</span>
+                    حقوقك
+                </h2>
+                <div class="section-content">
+                    <p>لديك الحقوق التالية فيما يتعلق ببياناتك الشخصية:</p>
+                    <ul>
+                        <li><strong>حق الوصول:</strong> يمكنك طلب نسخة من بياناتك الشخصية</li>
+                        <li><strong>حق التصحيح:</strong> يمكنك تحديث أو تصحيح بياناتك</li>
+                        <li><strong>حق الحذف:</strong> يمكنك طلب حذف بياناتك</li>
+                        <li><strong>حق الاعتراض:</strong> يمكنك الاعتراض على معالجة بياناتك</li>
+                        <li><strong>حق نقل البيانات:</strong> يمكنك الحصول على بياناتك بصيغة قابلة للنقل</li>
+                        <li><strong>حق سحب الموافقة:</strong> يمكنك سحب موافقتك في أي وقت</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">👶</span>
+                    خصوصية الأطفال
+                </h2>
+                <div class="section-content">
+                    <p>خدماتنا غير موجهة للأطفال دون سن 18 عاماً. لا نجمع عن قصد معلومات شخصية من الأطفال. إذا اكتشفنا أننا جمعنا معلومات من طفل دون موافقة الوالدين، سنقوم بحذفها فوراً.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">
+                    <span class="section-icon">🔄</span>
+                    التحديثات على السياسة
+                </h2>
+                <div class="section-content">
+                    <p>قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. سنخطرك بأي تغييرات جوهرية عبر:</p>
+                    <ul>
+                        <li>إشعار بارز على موقعنا الإلكتروني</li>
+                        <li>رسالة عبر البريد الإلكتروني</li>
+                        <li>إشعار داخل التطبيق</li>
+                    </ul>
+                    <p>نوصي بمراجعة هذه الصفحة بشكل دوري للبقاء على اطلاع بممارساتنا.</p>
+                </div>
+            </div>
+
+            <!-- Contact Box -->
+            <div class="contact-box">
+                <h3>هل لديك أسئلة حول خصوصيتك؟</h3>
+                <p>نحن هنا للإجابة على جميع استفساراتك المتعلقة بالخصوصية وحماية البيانات</p>
+                <a href="contact.html" class="contact-btn">تواصل معنا</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>عن المتجر</h3>
+                <p>حانوتي هو متجرك الإلكتروني الموثوق للحصول على أفضل المنتجات بأسعار منافسة. نسعى لتوفير تجربة تسوق ممتعة وآمنة لجميع عملائنا.</p>
+                <div class="social-links">
+                    <div class="social-icon">📘</div>
+                    <div class="social-icon">📷</div>
+                    <div class="social-icon">🐦</div>
+                    <div class="social-icon">📺</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="#products">المنتجات</a></li>
+                    <li><a href="#features">المميزات</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="terms-and-conditions.html">شروط الاستخدام</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>خدمة العملاء</h3>
+                <ul>
+                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    <li><a href="return_policy.html">سياسة الإرجاع</a></li>
+                    <li><a href="shipping-policy.html">الشحن والتوصيل</a></li>
+                    <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>معلومات التواصل</h3>
+                <ul>
+                    <li>📧 info@hanouti.shop</li>
+                    <li>📱 95 25 63 674 213+</li>
+                    <li>📍 الجزائر، سطيف</li>
+                    <li>⏰ السبت - الخميس: 9 صباحاً - 6 مساءً</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 حانوتي - جميع الحقوق محفوظة | صُمم بـ ❤️ في الجزائر</p>
+        </div>
+    </footer>
+</body>
+</html>

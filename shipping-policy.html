@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الشحن والتوصيل  </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --success: #10b981;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--light);
+            line-height: 1.9;
+            color: var(--dark);
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "🚚";
+            position: absolute;
+            font-size: 20rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: move 8s ease-in-out infinite;
+        }
+
+        @keyframes move {
+            0%, 100% { transform: translate(-50%, -50%); }
+            50% { transform: translate(-30%, -50%); }
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .quick-info {
+            max-width: 1200px;
+            margin: -3rem auto 4rem;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(99, 102, 241, 0.2);
+        }
+
+        .info-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--light);
+        }
+
+        table {
+            width: 100%;
+            margin: 2rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: right;
+        }
+
+        tbody tr {
+            background: white;
+            border-bottom: 1px solid var(--light);
+        }
+
+        tbody tr:hover {
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: var(--light);
+            border-radius: 15px;
+        }
+
+        .timeline-icon {
+            min-width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .alert {
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            border-right: 4px solid;
+        }
+
+        .alert-success {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: var(--success);
+        }
+
+        .map-section {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .wilaya-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .wilaya-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .wilaya-item:hover {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            transform: scale(1.05);
+        }
+
+         /* Footer */
+        footer {
+            background: linear-gradient(135deg, #1e2a38 0%, #2c3e50 100%);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-section h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(to left, var(--primary), var(--secondary));
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+            transform: translateX(-5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .social-icon:hover {
+            background: var(--primary);
+            transform: translateY(-5px) rotate(360deg);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #bdc3c7;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .content-card { padding: 2rem; }
+            .nav-links { display: none; }
+            .info-grid { grid-template-columns: 1fr; }
+            .wilaya-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><img src="logo.png" alt="" width="100px"> </div>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>سياسة الشحن والتوصيل</h1>
+        <p>نوصل لك في كل مكان - سريع وآمن ومضمون</p>
+    </section>
+
+    <section class="quick-info">
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-icon">🇩🇿</div>
+                <h3>69 ولاية</h3>
+                <p>تغطية كاملة للجزائر</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">⚡</div>
+                <h3>1-2 أيام</h3>
+                <p>مدة التوصيل</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">📦</div>
+                <h3>تغليف آمن</h3>
+                <p>حماية كاملة للمنتجات</p>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">🔍</div>
+                <h3>تتبع مباشر</h3>
+                <p>راقب طلبك لحظة بلحظة</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="content">
+        <div class="content-card">
+            <h2 class="section-title">🚚 مناطق التوصيل</h2>
+            <p style="margin-bottom: 1.5rem;">نفخر بتقديم خدمة التوصيل لجميع ولايات الجزائر الـ 69. أينما كنت، سنصل إليك!</p>
+            
+            <div class="map-section">
+                <h3 style="margin-bottom: 1rem; color: var(--dark);">الولايات المغطاة</h3>
+                <div class="wilaya-grid">
+                    <div class="wilaya-item">الجزائر العاصمة</div>
+                    <div class="wilaya-item">وهران</div>
+                    <div class="wilaya-item">قسنطينة</div>
+                    <div class="wilaya-item">سطيف</div>
+                    <div class="wilaya-item">بجاية</div>
+                    <div class="wilaya-item">تيزي وزو</div>
+                    <div class="wilaya-item">بليدة</div>
+                    <div class="wilaya-item">عنابة</div>
+                    <div class="wilaya-item">تلمسان</div>
+                    <div class="wilaya-item">باتنة</div>
+                    <div class="wilaya-item">ورقلة</div>
+                    <div class="wilaya-item">بسكرة</div>
+                    <div class="wilaya-item">+ 57 ولاية أخرى</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2 class="section-title">⏰ مدة التوصيل</h2>
+            <p style="margin-bottom: 1rem;">تختلف مدة التوصيل حسب موقعك الجغرافي:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>المنطقة</th>
+                        <th>الولايات</th>
+                        <th>المدة</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>المنطقة 1</strong></td>
+                        <td>الولايات الشمالية</td>
+                        <td>1-2 أيام عمل</td>
+                    </tr>
+                    <tr>
+                        <td><strong>المنطقة 2</strong></td>
+                        <td>الولايات الجنوبية</td>
+                        <td>2-3 أيام عمل</td>
+                    </tr>
+                    <tr>
+                    
+                </tbody>
+            </table>
+
+            <div class="alert alert-success">
+                <strong>✓ ملاحظة:</strong> المدة المذكورة تبدأ من تاريخ تأكيد الطلب وليس من تاريخ الطلب.
+            </div>
+        </div>
+
+        <div class="content-card">
+            <h2 class="section-title">💰 تكاليف الشحن</h2>
+            
+            <p>تكاليف الشحن حسب الولاية</p>
+
+           
+        </div>
+
+        <div class="content-card">
+            <h2 class="section-title">📋 مراحل الشحن</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">✓</div>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem;">1. تأكيد الطلب</h3>
+                        <p>نتحقق من الطلب وتوفر المنتجات ونرسل تأكيداً عبر البريد والهاتف</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">📦</div>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem;">2. التحضير والتعبئة</h3>
+                        <p>نحضر طلبك بعناية ونغلفه بشكل آمن لحمايته أثناء النقل</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">🚚</div>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem;">3. الشحن</h3>
+                        <p>نسلم الطلب لشركة الشحن ونرسل لك رقم التتبع</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">📍</div>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem;">4. في الطريق</h3>
+                        <p>الطلب في طريقه إليك، يمكنك تتبعه عبر رقم التتبع</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">🎉</div>
+                    <div>
+                        <h3 style="margin-bottom: 0.5rem;">5. التسليم</h3>
+                        <p>يتصل بك مندوب التوصيل لتحديد موعد التسليم المناسب</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="content-card">
+            <h2 class="section-title">⚠️ شروط التوصيل المهمة</h2>
+            <ul style="line-height: 2;">
+                <li>يجب توفر شخص بالغ لاستلام الطلب</li>
+                <li>يرجى تقديم عنوان دقيق ورقم هاتف صحيح</li>
+                <li>تحقق من الطلب قبل التوقيع على إيصال التسليم</li>
+                <li>في حالة وجود تلف، لا توقع واتصل بنا فوراً</li>
+                <li>المندوب ينتظر 10 دقائق فقط بعد الاتصال</li>
+                <li>إذا لم يتم الاستلام، سيعاد الطلب للمخزن</li>
+            </ul>
+        </div>
+
+        <div class="content-card">
+            <h2 class="section-title">❌ حالات عدم التوصيل</h2>
+            <p>لن نتمكن من التوصيل في الحالات التالية:</p>
+            <ul style="line-height: 2; margin-top: 1rem;">
+                <li>عنوان غير دقيق أو غير موجود</li>
+                <li>رفض استلام الطلب دون سبب مشروع</li>
+                <li>عدم الرد على اتصالات المندوب (3 محاولات)</li>
+                <li>طلب تغيير العنوان بعد الشحن</li>
+                <li>المنطقة غير آمنة أو يصعب الوصول إليها</li>
+            </ul>
+            <p style="margin-top: 1rem;"><strong>في هذه الحالات:</strong> سيعاد الطلب وقد تُطبق رسوم إعادة الشحن</p>
+        </div>
+    </div>
+
+       <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>عن المتجر</h3>
+                <p>حانوتي هو متجرك الإلكتروني الموثوق للحصول على أفضل المنتجات بأسعار منافسة. نسعى لتوفير تجربة تسوق ممتعة وآمنة لجميع عملائنا.</p>
+                <div class="social-links">
+                    <div class="social-icon">📘</div>
+                    <div class="social-icon">📷</div>
+                    <div class="social-icon">🐦</div>
+                    <div class="social-icon">📺</div>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="#products">المنتجات</a></li>
+                    <li><a href="#features">المميزات</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="terms-and-conditions.html">شروط الاستخدام</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>خدمة العملاء</h3>
+                <ul>
+                    <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    <li><a href="return_policy.html">سياسة الإرجاع</a></li>
+                    <li><a href="shipping-policy.html">الشحن والتوصيل</a></li>
+                    <li><a href="privacy-policy.html">سياسة الخصوصية</a></li>
+                    <li><a href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>معلومات التواصل</h3>
+                <ul>
+                    <li>📧 info@hanouti.shop</li>
+                    <li>📱 95 25 63 674 213+</li>
+                    <li>📍 الجزائر، سطيف</li>
+                    <li>⏰ السبت - الخميس: 9 صباحاً - 6 مساءً</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 حانوتي - جميع الحقوق محفوظة | صُمم بـ ❤️ في الجزائر</p>
+        </div>
+    </footer>
+</body>
+</html>
