@@ -1,6 +1,6 @@
 // script.js
     (() => {
-      const baseAmount = 7000.0;
+      const baseAmount = 6700.0;
       const officeDeliveryCost = 500.0;
       const homeDeliveryCosts = {
         
@@ -338,6 +338,7 @@ quantityy.innerHTML = `${quantity}`;
 
 
     
+
 
 
 
