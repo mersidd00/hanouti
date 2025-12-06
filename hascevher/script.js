@@ -95,7 +95,7 @@
 
                   // إرسال الحدث إلى Facebook
         fbq('track', 'Purchase', {
-         value: 15500.00,     // ← غيّرها لسعر المنتج
+         value: 16500.00,     // ← غيّرها لسعر المنتج
          currency: 'DZD'    // ← غيّرها لعملتك مثل 'DZD' أو 'EUR'
         });
 
@@ -103,7 +103,7 @@
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
 
-        fetch("https://moriti.app.n8n.cloud/webhook/order", {
+        fetch("https://gangrabah22.app.n8n.cloud/webhook/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -338,6 +338,7 @@ quantityy.innerHTML = `${quantity}`;
 
 
     
+
 
 
 
