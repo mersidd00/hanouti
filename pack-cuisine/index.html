@@ -299,7 +299,7 @@
       maxlength="15"
       inputmode="numeric"
       title="Phone number must be exactly 10 digits"
-      oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(10,15)"
+      oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,15)"
       aria-describedby="phoneError"
       aria-invalid="false"
     />
@@ -525,6 +525,7 @@
         </div>
     </footer>
 </html>
+
 
 
 
