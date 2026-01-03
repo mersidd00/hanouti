@@ -295,11 +295,11 @@
       placeholder="رقم الهاتف"
       class="text-right w-full border border-gray-300 rounded-md px-3 py-2 mb-1 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
       autocomplete="tel"
-      pattern="\d{10}"
-      maxlength="10"
+      pattern="\d{10,15}"
+      maxlength="15"
       inputmode="numeric"
       title="Phone number must be exactly 10 digits"
-      oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,10)"
+      oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(10,15)"
       aria-describedby="phoneError"
       aria-invalid="false"
     />
@@ -525,6 +525,7 @@
         </div>
     </footer>
 </html>
+
 
 
 
