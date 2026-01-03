@@ -198,7 +198,7 @@ quantityy.innerHTML = `${quantity}`;
 
       function validateForm() {
         const isFullnameValid = validateField(fullnameInput, fullnameError, val => val.trim().length > 0);
-        const isPhoneValid = validateField(phoneInput, phoneError, val => /^\d{10}$/.test(val));
+        const isPhoneValid = validateField(phoneInput, phoneError, val => /^\d{10,15}$/.test(val));
         const isWilayaValid = validateField(wilayaSelect, wilayaError, val => val.trim() !== '');
         const isDeliveryValid = validateRadioGroup('delivery_cost', deliveryCostError);
 
@@ -210,7 +210,7 @@ quantityy.innerHTML = `${quantity}`;
       });
 
       phoneInput.addEventListener('input', () => {
-        validateField(phoneInput, phoneError, val => /^\d{10}$/.test(val));
+        validateField(phoneInput, phoneError, val => /^\d{10,15}$/.test(val));
       });
 
       wilayaSelect.addEventListener('change', () => {
@@ -338,6 +338,7 @@ quantityy.innerHTML = `${quantity}`;
 
 
     
+
 
 
 
