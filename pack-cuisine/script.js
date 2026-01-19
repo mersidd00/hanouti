@@ -4,7 +4,7 @@
       const officeDeliveryCost = 500.0;
       const homeDeliveryCosts = {
         
-  "01 - Adrar": 1500,
+  "01 - Adrar": 1400,
   "02 - Chlef": 800,
   "03 - Laghouat": 950,
   "04 - Oum El Bouaghi": 800,
@@ -19,7 +19,7 @@
   "13 - Tlemcen": 900,
   "14 - Tiaret": 800,
   "15 - Tizi Ouzou": 750,
-  "16 - Alger": 650,
+  "16 - Alger": 600,
   "17 - Djelfa": 950,
   "18 - Jijel": 750,
   "19 - Sétif": 600,
@@ -37,7 +37,7 @@
   "31 - Oran": 750,
   "32 - El Bayadh": 1100,
   "33 - Illizi": 0,
-  "34 - Bordj Bou Arréridj": 700,
+  "34 - Bordj Bou Arréridj": 600,
   "35 - Boumerdès": 750,
   "36 - El Tarf": 800,
   "37 - Tindouf": 0,
@@ -52,16 +52,16 @@
   "46 - Aïn Témouchent": 800,
   "47 - Ghardaïa": 950,
   "48 - Relizane": 800,
-  "49 - Timimoun": 950,
+  "49 - Timimoun": 1100,
   "50 - Bordj Badji Mokhtar": 1000,
   "51 - Ouled Djellal": 900,
-  "52 - Béni Abbès": 0,
-  "53 - In Salah": 1000,
-  "54 - In Guezzam": 1500,
+  "52 - Béni Abbès": 1400,
+  "53 - In Salah": 1600,
+  "54 - In Guezzam": 1400,
   "55 - Touggourt": 950,
   "56 - Djanet": 0,
-  "57 - El M'Ghair": 1600,
-  "58 - El Menia": 1600
+  "57 - El M'Ghair": 950,
+  "58 - El Menia": 1000
 
 
       };
@@ -338,6 +338,7 @@ quantityy.innerHTML = `${quantity}`;
 
 
     
+
 
 
 
