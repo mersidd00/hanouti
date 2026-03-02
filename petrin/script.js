@@ -103,7 +103,7 @@
 
                   // إرسال الحدث إلى Facebook
         fbq('track', 'Purchase', {
-         value: 5500.00,     // ← غيّرها لسعر المنتج
+         value: 12500.00,     // ← غيّرها لسعر المنتج
          currency: 'DZD'    // ← غيّرها لعملتك مثل 'DZD' أو 'EUR'
         });
 
@@ -356,6 +356,7 @@ errorsClone.innerHTML = "";
 
 
     
+
 
 
 
