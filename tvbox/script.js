@@ -111,7 +111,7 @@
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
 
-        fetch("https://ramadan2.app.n8n.cloud/webhook/order", {
+        fetch("https://tvbox.app.n8n.cloud/webhook/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
