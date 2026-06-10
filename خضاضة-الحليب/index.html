@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="خضاضة الحليب    ">
+  <title>  خضاضة الحليب  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+  />
+<link rel="stylesheet" href="style.css" >
+ <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W181QNTWTQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W181QNTWTQ');
+</script>
+
+
+<style>
+ * { font-family: 'Cairo', sans-serif; box-sizing: border-box; }
+ .size-label, .delivery-label {
+      transition: all 0.2s ease;
+    }
+    .size-label.selected, .delivery-label.selected {
+      border-color: #ea580c !important;
+      background-color: #fff7ed !important;
+    }
+    .size-label:hover, .delivery-label:hover {
+      border-color: #ea580c;
+    }
+    input[type="radio"] { display: none; }
+  </style>
+</head>
+<body class="bg-white flex flex-col items-center justify-start min-h-screen p-4 space-y-6" >
+  
+
+    <!-- رأس الصفحة -->
+    <header class="header">
+        <div class="logo-icons">
+            <img src="images/menu.png" alt="قائمة" class="icon">
+            <img src="images/logo.png" alt="لوجو المتجر" class="logo" width="100px">
+            <div class="icons">
+                
+                <img src="images/cart.png" alt="سلة" class="icon">
+            </div>
+        </div>
+    </header>
+    <hr>
+
+
+
+<div class="page-wrapper">
+<div class="container" aria-label="Product image slider and information">
+    <section class="slider" aria-label="Product image slider">
+      <div class="slides">
+         <div class="slide active">
+          <img src="images/1.webp" draggable="false"  alt="1" fetchpriority="high">
+        </div>
+        <div class="slide">
+          <img src="images/2.webp" draggable="false" loading="lazy" alt="2">
+        </div>
+        <div class="slide">
+          <img src="images/3.webp" draggable="false" loading="lazy" alt="3">
+        </div>
+        <div class="slide">
+          <img src="images/4.webp" draggable="false" loading="lazy" alt="4">
+        </div>
+        <div class="slide">
+          <img src="images/5.webp" draggable="false" loading="lazy" alt="5">
+        </div>
+        <div class="slide">
+          <img src="images/6.webp" draggable="false" loading="lazy" alt="5">
+        </div>
+       
+        
+        
+      </div>
+       <button aria-label="++" class="nav-arrow prev" type="button"></button>
+      <button aria-label="--" class="nav-arrow next" type="button"></button>
+    </section>
+
+    <nav class="thumbnails" aria-label="Product image thumbnails" role="list">
+         <button aria-label="1" class="thumbnail active" data-index="0" role="listitem">
+        <img src="images/1.webp" draggable="false" loading="lazy" alt="1">
+      </button>
+      <button aria-label="2" class="thumbnail" data-index="1" role="listitem">
+        <img src="images/2.webp" draggable="false" loading="lazy" alt="2">
+      </button>
+      <button aria-label="3" class="thumbnail" data-index="2" role="listitem">
+        <img src="images/3.webp" draggable="false" loading="lazy" alt="3">
+      </button>
+      <button aria-label="4" class="thumbnail" data-index="3" role="listitem">
+        <img src="images/4.webp" draggable="false" loading="lazy" alt="4">
+      </button>
+      <button aria-label="5" class="thumbnail" data-index="4" role="listitem">
+        <img src="images/5.webp" draggable="false" loading="lazy" alt="5">
+      </button>
+      <button aria-label="6" class="thumbnail" data-index="5" role="listitem">
+        <img src="images/6.webp" draggable="false" loading="lazy" alt="5">
+      </button>
+      
+     
+
+    </nav>
+
+   
+  </div>
+
+
+
+
+
+
+
+<div> <section class="product-info text-right ">
+      <h1 class="product-title">     GOLD STAR        خضاضة الحليب</h1>
+      <p class="product-price text-3xl">5500 DA  </p>
+    </section>
+<br>
+  <form
+      dir="rtl"
+      id="orderForm"
+      class="w-full border border-orange-600 rounded-lg shadow-lg p-6 bg-gradient-to-br from-indigo-50 via-white to-violet-50 "
+      novalidate
+    >
+      <input type="hidden" name="product_title" id="productTitle" value="خضاضة الحليب">
+      <input type="hidden" name="total_price" id="totalPriceInput" value="">
+      <input type="hidden" name="delivery_price" id="deliveryPriceInput" value="">
+
+      <h2 class="text-center font-semibold text-gray-900 mb-6 text-lg">استمارة الطلب</h2>
+
+      <!-- الاسم -->
+      <label for="fullname" class="block font-semibold text-gray-800 mb-1">الاسم و اللقب</label>
+      <input
+        id="fullname" name="fullname" type="text" placeholder="الاسم و اللقب"
+        class="w-full border border-gray-300 rounded-md px-3 py-2 mb-1 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+        autocomplete="name" aria-describedby="fullnameError" aria-invalid="false"
+      />
+      <p id="fullnameError" class="text-red-600 text-sm mb-4 hidden">يرجى إدخال الاسم</p>
+
+      <!-- الهاتف -->
+      <label for="phone" class="block font-semibold text-gray-800 mb-1">رقم الهاتف</label>
+      <input
+        id="phone" name="phone" type="tel" placeholder="رقم الهاتف"
+        class="w-full text-right border border-gray-300 rounded-md px-3 py-2 mb-1 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+        autocomplete="tel" maxlength="15" inputmode="numeric"
+        oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,15)"
+        aria-describedby="phoneError" aria-invalid="false"
+      />
+      <p id="phoneError" class="text-red-600 text-sm mb-4 hidden">يرجى إدخال رقم الهاتف</p>
+
+      <!-- الولاية -->
+      <label for="wilaya" class="block font-semibold text-gray-800 mb-1">الولاية</label>
+      <select
+        id="wilaya" name="wilaya"
+        class="w-full border border-gray-300 rounded-md px-3 py-2 mb-1 appearance-none bg-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+        aria-describedby="wilayaError" aria-invalid="false"
+      >
+        <option value="">- الولاية -</option>
+        <option value="adrar">01 - أدرار</option>
+        <option value="chlef">02 - الشلف</option>
+        <option value="laghouat">03 - الأغواط</option>
+        <option value="oum_el_bouaghi">04 - أم البواقي</option>
+        <option value="batna">05 - باتنة</option>
+        <option value="bejaia">06 - بجاية</option>
+        <option value="biskra">07 - بسكرة</option>
+        <option value="bechar">08 - بشار</option>
+        <option value="blida">09 - البليدة</option>
+        <option value="bouira">10 - البويرة</option>
+        <option value="tamanrasset">11 - تمنراست</option>
+        <option value="tebessa">12 - تبسة</option>
+        <option value="tlemcen">13 - تلمسان</option>
+        <option value="tiaret">14 - تيارت</option>
+        <option value="tizi_ouzou">15 - تيزي وزو</option>
+        <option value="alger">16 - الجزائر</option>
+        <option value="djelfa">17 - الجلفة</option>
+        <option value="jijel">18 - جيجل</option>
+        <option value="setif">19 - سطيف</option>
+        <option value="saida">20 - سعيدة</option>
+        <option value="skikda">21 - سكيكدة</option>
+        <option value="sidi_bel_abbes">22 - سيدي بلعباس</option>
+        <option value="annaba">23 - عنابة</option>
+        <option value="guelma">24 - قالمة</option>
+        <option value="constantine">25 - قسنطينة</option>
+        <option value="medea">26 - المدية</option>
+        <option value="mostaganem">27 - مستغانم</option>
+        <option value="msila">28 - المسيلة</option>
+        <option value="mascara">29 - معسكر</option>
+        <option value="ouargla">30 - ورقلة</option>
+        <option value="oran">31 - وهران</option>
+        <option value="el_bayadh">32 - البيض</option>
+        <option value="bordj_bou_arreridj">34 - برج بوعريريج</option>
+        <option value="boumerdes">35 - بومرداس</option>
+        <option value="el_tarf">36 - الطارف</option>
+        <option value="tissemsilt">38 - تيسمسيلت</option>
+        <option value="el_oued">39 - الوادي</option>
+        <option value="khenchela">40 - خنشلة</option>
+        <option value="souk_ahras">41 - سوق أهراس</option>
+        <option value="tipaza">42 - تيبازة</option>
+        <option value="mila">43 - ميلة</option>
+        <option value="ain_defla">44 - عين الدفلى</option>
+        <option value="naama">45 - النعامة</option>
+        <option value="ain_temouchent">46 - عين تموشنت</option>
+        <option value="ghardaia">47 - غرداية</option>
+        <option value="relizane">48 - غليزان</option>
+        <option value="timimoun">49 - تيميمون</option>
+        <option value="ouled_djellal">51 - أولاد جلال</option>
+        <option value="beni_abbes">52 - بني عباس</option>
+        <option value="in_salah">53 - عين صالح</option>
+        <option value="in_guezzam">54 - عين قزام</option>
+        <option value="touggourt">55 - تقرت</option>
+        <option value="el_meghaier">57 - المغير</option>
+        <option value="el_menia">58 - المنيعة</option>
+      </select>
+      <p id="wilayaError" class="text-red-600 text-sm mb-4 hidden">يرجى اختيار الولاية</p>
+
+      <!-- الحجم -->
+      <fieldset class="mb-4">
+        <legend class="font-semibold text-gray-800 mb-3 block">الحجم</legend>
+        <div class="grid grid-cols-3 gap-3">
+
+          <label for="size3" id="labelSize3" class="size-label flex flex-col items-center justify-center border-2 border-gray-300 rounded-xl p-3 cursor-pointer">
+            <input type="radio" id="size3" name="size" value="3L" data-price="5500" />
+            <span class="text-xl font-bold text-gray-800">3L</span>
+            <span class="text-sm text-orange-600 font-semibold mt-1">5,500 دج</span>
+          </label>
+
+          <label for="size5" id="labelSize5" class="size-label flex flex-col items-center justify-center border-2 border-gray-300 rounded-xl p-3 cursor-pointer">
+            <input type="radio" id="size5" name="size" value="5L" data-price="6500" />
+            <span class="text-xl font-bold text-gray-800">5L</span>
+            <span class="text-sm text-orange-600 font-semibold mt-1">6,500 دج</span>
+          </label>
+
+          <label for="size7" id="labelSize7" class="size-label flex flex-col items-center justify-center border-2 border-gray-300 rounded-xl p-3 cursor-pointer">
+            <input type="radio" id="size7" name="size" value="7L" data-price="7500" />
+            <span class="text-xl font-bold text-gray-800">7L</span>
+            <span class="text-sm text-orange-600 font-semibold mt-1">7,500 دج</span>
+          </label>
+
+        </div>
+        <p id="sizeError" class="text-red-600 text-sm mt-2 hidden">يرجى اختيار الحجم</p>
+      </fieldset>
+
+      <!-- نوع التوصيل -->
+      <fieldset class="mb-4" aria-describedby="deliveryCostError" role="radiogroup">
+        <legend class="font-semibold text-gray-800 mb-3 block">نوع التوصيل</legend>
+        <div class="grid grid-cols-2 gap-4">
+
+          <label for="deliveryOffice" id="labelOffice" class="delivery-label flex flex-col items-center justify-center border-2 border-gray-300 rounded-xl p-4 cursor-pointer">
+            <input type="radio" id="deliveryOffice" name="delivery_cost" value="office" />
+            <span class="text-gray-700 font-medium mb-2">إلى المكتب</span>
+            <span class="text-orange-600 font-bold">500 دج</span>
+          </label>
+
+          <label for="deliveryHome" id="labelHome" class="delivery-label flex flex-col items-center justify-center border-2 border-gray-300 rounded-xl p-4 cursor-pointer">
+            <input type="radio" id="deliveryHome" name="delivery_cost" value="home" />
+            <span class="text-gray-700 font-medium mb-2">إلى المنزل</span>
+            <span class="text-orange-600 font-bold" id="homeDeliveryPrice">-</span>
+          </label>
+
+        </div>
+        <p id="deliveryCostError" class="text-red-600 text-sm mt-2 hidden">يرجى اختيار نوع التوصيل</p>
+      </fieldset>
+
+      <!-- الكمية -->
+      <fieldset class="mb-6 border-b border-gray-300 py-3 text-center">
+        <div class="inline-flex items-center gap-3">
+          <button type="button" id="minusBtn" class="bg-gray-200 hover:bg-gray-300 rounded px-3 py-1 select-none text-lg">−</button>
+          <input type="text" id="quantityInput" name="quantity" value="1" readonly
+            class="w-12 text-center border border-gray-300 rounded-md py-1 text-gray-900 font-semibold" />
+          <button type="button" id="plusBtn" class="bg-gray-200 hover:bg-gray-300 rounded px-3 py-1 select-none text-lg">+</button>
+        </div>
+      </fieldset>
+
+      <!-- ملخص الطلب -->
+      <div class="max-w-sm mx-auto bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 text-white font-semibold shadow-lg mb-6">
+        <h3 class="text-center text-lg mb-4">ملخص الطلب</h3>
+        <div class="border-b border-white/40 pb-4 space-y-3">
+          <div class="flex justify-between text-base">
+            <span>سعر المنتج (<span id="quantityy">1</span>×)</span>
+            <span id="subTotal">— دج</span>
+          </div>
+          <div class="flex justify-between text-base">
+            <span>سعر التوصيل</span>
+            <span id="deliveryCostt">— دج</span>
+          </div>
+        </div>
+        <div class="pt-4 flex justify-between items-center">
+          <span class="text-lg font-bold">السعر الإجمالي</span>
+          <div class="text-right">
+            <div id="totalAmount" class="text-3xl font-extrabold leading-none">—</div>
+            <div class="text-sm font-semibold text-blue-200">دينار جزائري</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- زر التأكيد -->
+      <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-xl py-3 tracking-wide transition-colors">
+        تأكيد الطلب
+      </button>
+      <div id="errorsClone" class="text-red-600 text-sm mt-3 text-right"></div>
+
+    </form>
+  </div>
+
+</div>
+
+
+      <!-- التذييل -->
+       <hr>
+    
+    
+
+  <script src="script.js" defer></script>
+
+  
+
+  <!-- SUPPORT STRIP -->
+ <section class="bg-[#1c2b3a] py-12 px-5  w-screen">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-[#e8550a] font-semibold text-xs uppercase tracking-widest mb-3">فريق حانوتي في خدمتك</p>
+      <h2 class="text-white text-xl md:text-2xl font-bold mb-3">هل تحتاج إلى مساعدة؟</h2>
+      <p class="text-[#7a97b0] text-sm mb-8 max-w-md mx-auto leading-relaxed">
+        تواصل معنا مباشرة وسيساعدك فريقنا في إتمام طلبك بسهولة تامة.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="tel:+213674632595" class="flex items-center gap-3 bg-white/5 border border-white/10 hover:border-[#e8550a] text-white text-sm px-6 py-3 rounded-xl transition-colors group">
+          <i class="fa-solid fa-phone text-[#e8550a]"></i>
+          <span class="group-hover:text-[#e8550a] transition-colors">0674 63 25 95</span>
+        </a>
+        <a href="https://wa.me/674632595" class="flex items-center gap-3 bg-white/5 border border-white/10 hover:border-[#e8550a] text-white text-sm px-6 py-3 rounded-xl transition-colors group">
+          <i class="fa-brands fa-whatsapp text-[#e8550a]"></i>
+          <span class="group-hover:text-[#e8550a] transition-colors">واتساب</span>
+        </a>
+        
+      </div>
+    </div>
+  </section>
+
+</body>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer class="bg-white border-t border-[#e8e4df]">
+  <div class="max-w-4xl mx-auto px-6 py-10 flex flex-col items-center text-center">
+    <div class=" px-5 py-2 rounded-lg mb-5">
+      <img src="images/logo.png" alt="logo" width="100px">
+    </div>
+    <p class="text-[#8a8078] text-sm mb-6 max-w-sm leading-relaxed">
+      منصة تجارة إلكترونية جزائرية موثوقة – تسوق بكل سهولة وأمان و بأسعار تنافسية من قلب العلمة.
+    </p>
+    <div class="flex items-center gap-5 mb-8">
+      <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-facebook-f"></i></a>
+    </div>
+    <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-gray-400 mb-8">
+        <span>العلمة ، سطيف</span>
+        <a href="tel:+213674632595" class="hover:text-[#e8550a] transition-colors">0674 63 25 95</a>
+        <a href="https://hanouti.shop/contact.html" class="hover:text-[#e8550a] transition-colors">اتصل بنا</a>
+        <a href="https://hanouti.shop/privacy-policy.html" class="hover:text-[#e8550a] transition-colors">سياسة الخصوصية</a>
+        <a href="https://hanouti.shop/terms-and-conditions.html" class="hover:text-[#e8550a] transition-colors">شروط الاستخدام</a>
+        <a href="index.html" class="hover:text-[#e8550a] transition-colors">الرئيسية</a>
+      </div>
+    <div class="border-t border-[#e8e4df] w-full pt-6 text-xs text-[#8a8078] leading-relaxed opacity-60">
+      <p>© 2026 حانوتي – جميع الحقوق محفوظة</p>
+      <p>صُمِّم بـ <span class="text-[#e8550a]">♥</span> في الجزائر</p>
+    </div>
+  </div>
+</footer>
+    
+</html>
+
