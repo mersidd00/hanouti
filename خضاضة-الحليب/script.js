@@ -11,21 +11,21 @@
   const officeDeliveryCost = 500;
 
   const homeDeliveryCosts = {
-    "adrar": 1400, "chlef": 800, "laghouat": 950, "oum_el_bouaghi": 750,
-    "batna": 800, "bejaia": 750, "biskra": 950, "bechar": 1100,
-    "blida": 750, "bouira": 750, "tamanrasset": 1600, "tebessa": 850,
-    "tlemcen": 900, "tiaret": 800, "tizi_ouzou": 750, "alger": 600,
-    "djelfa": 950, "jijel": 750, "setif": 600, "saida": 800,
-    "skikda": 750, "sidi_bel_abbes": 800, "annaba": 800, "guelma": 750,
-    "constantine": 750, "medea": 800, "mostaganem": 800, "msila": 850,
-    "mascara": 800, "ouargla": 950, "oran": 750, "el_bayadh": 1100,
-    "bordj_bou_arreridj": 600, "boumerdes": 750, "el_tarf": 800,
-    "tissemsilt": 800, "el_oued": 950, "khenchela": 800, "souk_ahras": 750,
-    "tipaza": 750, "mila": 700, "ain_defla": 750, "naama": 1100,
-    "ain_temouchent": 800, "ghardaia": 950, "relizane": 800,
-    "timimoun": 1100, "ouled_djellal": 900, "beni_abbes": 1400,
-    "in_salah": 1600, "in_guezzam": 1400, "touggourt": 950,
-    "el_meghaier": 950, "el_menia": 1000
+    "adrar": 1200, "chlef": 600, "laghouat": 750, "oum_el_bouaghi": 600,
+    "batna": 600, "bejaia": 600, "biskra": 750, "bechar": 900,
+    "blida": 600, "bouira": 600, "tamanrasset": 1400, "tebessa": 650,
+    "tlemcen": 700, "tiaret": 600, "tizi_ouzou": 600, "alger": 600,
+    "djelfa": 750, "jijel": 600, "setif": 600, "saida": 600,
+    "skikda": 600, "sidi_bel_abbes": 600, "annaba": 600, "guelma": 600,
+    "constantine": 600, "medea": 600, "mostaganem": 600, "msila": 650,
+    "mascara": 600, "ouargla": 600, "oran": 600, "el_bayadh": 900,
+    "bordj_bou_arreridj": 600, "boumerdes": 600, "el_tarf": 600,
+    "tissemsilt": 600, "el_oued": 750, "khenchela": 600, "souk_ahras": 600,
+    "tipaza": 600, "mila": 600, "ain_defla": 600, "naama": 900,
+    "ain_temouchent": 600, "ghardaia": 750, "relizane": 600,
+    "timimoun": 900, "ouled_djellal": 700, "beni_abbes": 1300,
+    "in_salah": 1400, "in_guezzam": 1400, "touggourt": 750,
+    "el_meghaier": 750, "el_menia": 800
   };
 
   // ========== العناصر ==========
