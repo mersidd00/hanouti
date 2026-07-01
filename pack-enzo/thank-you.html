@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شكراً لك – حانوتي</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            orange: { DEFAULT: '#e8550a', light: '#f4874a', dark: '#c44508' },
+            navy:   { DEFAULT: '#1c2b3a', light: '#2a3f52' },
+          },
+          fontFamily: { cairo: ['Cairo', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+    .checkmark-circle {
+      stroke-dasharray: 166;
+      stroke-dashoffset: 166;
+      animation: stroke 0.6s cubic-bezier(0.65,0,0.45,1) forwards;
+    }
+    .checkmark-check {
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      animation: stroke 0.3s cubic-bezier(0.65,0,0.45,1) 0.6s forwards;
+    }
+    @keyframes stroke {
+      100% { stroke-dashoffset: 0; }
+    }
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.6s ease forwards;
+    }
+    .fade-up-1 { animation-delay: 0.3s; }
+    .fade-up-2 { animation-delay: 0.5s; }
+    .fade-up-3 { animation-delay: 0.7s; }
+    .fade-up-4 { animation-delay: 0.9s; }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-navy min-h-screen flex flex-col">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <div >
+        <span class="text-white text-xl font-extrabold tracking-tight">
+          <img src="images/logo.png" alt="logo" width="100px">
+        </span>
+      </div>
+      <div class="hidden md:flex items-center gap-6 text-sm text-gray-500 font-medium">
+        <a href="index.html" class="hover:text-[#e8550a] transition-colors">الرئيسية</a>
+        
+       
+        <a href="https://hanouti.shop/contact.html" class="hover:text-[#e8550a] transition-colors">اتصل بنا</a>
+      
+  </nav>
+
+  <!-- HERO SECTION -->
+  <main class="flex-1">
+    <section class="bg-white py-16 px-5">
+      <div class="max-w-2xl mx-auto text-center">
+
+        <!-- Animated Checkmark -->
+        <div class="flex justify-center mb-8">
+          <svg class="w-24 h-24" viewBox="0 0 52 52">
+            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" stroke="#20e80a" stroke-width="2"/>
+            <path class="checkmark-check" fill="none" stroke="#20e80a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M14 27l7 7 17-17"/>
+          </svg>
+        </div>
+
+        <div class="fade-up fade-up-1">
+          <p class="text-[#e8550a] font-semibold text-sm uppercase tracking-widest mb-3">تم الطلب بنجاح</p>
+          <h1 class="text-3xl md:text-4xl font-extrabold text-navy mb-4 leading-tight">
+            شكراً لك على ثقتك بحانوتي!
+          </h1>
+          <p class="text-gray-500 text-base leading-relaxed max-w-lg mx-auto mb-8">
+            لقد استلمنا طلبك بنجاح وسيتم معالجته في أقرب وقت. سنتصل بيك في أقرب وقت تفقد هاتفك.
+          </p>
+        </div>
+
+        <!-- Order Card -->
+        <div class="fade-up fade-up-2 bg-gray-50 border border-gray-100 rounded-2xl p-6 text-right mb-8 max-w-md mx-auto">
+          <p class="text-xs text-gray-400 font-medium uppercase tracking-wider mb-4 text-center">تفاصيل الطلب</p>
+          <div class="space-y-3 text-sm">
+            <div class="flex justify-between items-center">
+              <span class="text-[#e8550a] font-bold">#HN-189512</span>
+              <span class="text-gray-400">رقم الطلب</span>
+            </div>
+            
+            <div class="border-t border-gray-100"></div>
+            <div class="flex justify-between items-center">
+              <span class="bg-amber-50 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full">قيد المعالجة</span>
+              <span class="text-gray-400 ">الحالة</span>
+            </div>
+            <div class="border-t border-gray-100"></div>
+            <div class="flex justify-between items-center">
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="fade-up fade-up-3 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="index.html" class="bg-[#e8550a] text-white text-sm font-semibold px-8 py-3 rounded-lg hover:bg-[#c44508] transition-colors">
+            العودة للتسوق 
+          </a>
+          
+        </div>
+
+      </div>
+    </section>
+
+    
+
+    <!-- CONTACT STRIP -->
+    <section class="bg-navy py-12 px-5">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-white text-xl md:text-2xl font-bold mb-2">هل لديك سؤال؟</h2>
+        <p class="text-gray-400 text-sm mb-6">فريق حانوتي دائماً بخدمتك من السبت إلى الخميس</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
+          <a href="tel:+213674632595" class="flex items-center gap-2 text-white hover:text-[#e8550a] transition-colors">
+            <i class="fa-solid fa-phone text-[#e8550a]"></i>
+            95 25 63 674 213+
+          </a>
+          <span class="hidden sm:block text-gray-600">|</span>
+          <span class="flex items-center gap-2 text-white hover:text-[#e8550a] transition-colors">
+            <i class="fa-solid fa-map-pin text-[#e8550a]"></i>
+            العلمة، سطيف
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-gray-100">
+    <div class="max-w-4xl mx-auto px-6 py-10 flex flex-col items-center text-center">
+
+      <div class=" px-5 py-2 rounded-lg mb-5">
+        <span class="text-white text-xl font-extrabold tracking-tight">
+          <img src="images/logo.png" alt="logo" width="100px">
+        </span>
+      </div>
+
+      <p class="text-gray-400 text-sm mb-6 max-w-sm leading-relaxed">
+        منصة تجارة إلكترونية جزائرية موثوقة – تسوق بكل سهولة وأمان و بأسعار تنافسية من قلب العلمة.
+      </p>
+
+      <div class="flex items-center gap-5 mb-8">
+        <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="text-[#e8550a] text-xl hover:opacity-60 transition-opacity"><i class="fa-brands fa-facebook-f"></i></a>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-gray-400 mb-8">
+        <span>العلمة ، سطيف</span>
+        <a href="tel:+213674632595" class="hover:text-[#e8550a] transition-colors">95 25 63 674 213+</a>
+        <a href="https://hanouti.shop/contact.html" class="hover:text-[#e8550a] transition-colors">اتصل بنا</a>
+        <a href="https://hanouti.shop/privacy-policy.html" class="hover:text-[#e8550a] transition-colors">سياسة الخصوصية</a>
+        <a href="https://hanouti.shop/terms-and-conditions.html" class="hover:text-[#e8550a] transition-colors">شروط الاستخدام</a>
+        <a href="index.html" class="hover:text-[#e8550a] transition-colors">الرئيسية</a>
+      </div>
+
+      <div class="border-t border-gray-100 w-full pt-6 text-xs text-gray-300 leading-relaxed">
+        <p>© 2026 حانوتي – جميع الحقوق محفوظة</p>
+        <p>صُمِّم بـ <span class="text-[#e8550a]">♥</span> في الجزائر</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
