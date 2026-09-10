@@ -1,6 +1,6 @@
 // script.js
     (() => {
-      const baseAmount = 10500.0;
+      const baseAmount = 9900.0;
       const officeDeliveryCost = 500.0;
       const homeDeliveryCosts = {
 
