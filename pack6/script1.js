@@ -107,7 +107,7 @@
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
 
-        fetch("https://entry12.app.n8n.cloud/webhook/order", {
+        fetch("https://entry22.app.n8n.cloud/webhook/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
